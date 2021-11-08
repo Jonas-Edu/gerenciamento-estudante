@@ -9,6 +9,7 @@ import { ListEstudanteComponent } from './components/list-estudante/list-estudan
 import { LoginEstudanteComponent } from './components/login-estudante/login-estudante.component';
 import { RegistrationEstudanteComponent } from './components/registration-estudante/registration-estudante.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
