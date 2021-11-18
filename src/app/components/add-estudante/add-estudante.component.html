@@ -1,12 +1,16 @@
 <h3>Adiciona Aluno</h3>
+<div *ngIf="msg" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Sucesso!</strong> Aluno Cadastrado Corretamento.
+  <button (click)="removeMsg()" type="button"  data-bs-dismiss="alert" aria-label="Close"> X </button>
+</div>
 <form [formGroup]="adicionaAluno" (ngSubmit)="SaveData()">
     <div class="mb-3">
-      <label class="form-label">nome</label>
+      <label class="form-label">Nome</label>
       <input type="text" class="form-control" placeholder="Digite o Nome" formControlName="nome" id="nome">
     </div>
 
      <div class="mb-3">
-        <label class="form-label">email</label>
+        <label class="form-label">Email</label>
         <input type="email" class="form-control" placeholder="Digite o Email" formControlName="email" id="email">
       </div> 
      <button type="submit" class="btn btn-primary">Submit</button>
