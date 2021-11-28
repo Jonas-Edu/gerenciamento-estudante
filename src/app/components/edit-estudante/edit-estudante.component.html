@@ -1,1 +1,17 @@
-<h3>edit-estudante works!</h3>
+<h3>Atualizar Aluno</h3>
+<div *ngIf="msg" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Sucesso!</strong> Cadastro Atualizado Corretamento.
+  <button (click)="removeMsg()" type="button"  data-bs-dismiss="alert" aria-label="Close"> X </button>
+</div>
+<form [formGroup]="editaAluno" (ngSubmit)="AtualizaData()">
+    <div class="mb-3">
+      <label class="form-label">Nome</label>
+      <input type="text" class="form-control" placeholder="Digite o Nome" formControlName="nome" id="nome">
+    </div>
+
+     <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" placeholder="Digite o Email" formControlName="email" id="email">
+      </div> 
+     <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
