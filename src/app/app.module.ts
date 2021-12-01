@@ -11,7 +11,7 @@ import { RegistrationEstudanteComponent } from './components/registration-estuda
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { DataTablesModule } from 'angular-datatables'
 
 
 @NgModule({
@@ -29,6 +29,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     NgbModule,
     HttpClientModule,
     ReactiveFormsModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
